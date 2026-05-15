@@ -1,0 +1,191 @@
+:root {
+  --bg: #0e0f12;
+  --surface: #16171c;
+  --text: #f2f2f2;
+  --muted: #9a9aa3;
+  --border: #262833;
+  --accent: #7c5cff;
+}
+
+body.light {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --text: #111111;
+  --muted: #6b6b6b;
+  --border: #e6e6e6;
+  --accent: #3d3dff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, "Google Sans", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(124,92,255,0.15), transparent 60%);
+  z-index: -1;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* HERO */
+.hero {
+  padding: 100px 40px;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 600px;
+}
+
+.cta {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--text);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text);
+}
+
+/* FEATURES GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 60px 40px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.card h3 {
+  margin-top: 12px;
+}
+
+.card p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ART GRID */
+.preview {
+  padding: 60px 40px;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.art {
+  height: 180px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+/* VALUE */
+.value {
+  padding: 80px 40px;
+  max-width: 700px;
+}
+
+.value p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* FINAL CTA */
+.final-cta {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .art-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
