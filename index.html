@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArtLink</title>
+    <title>ArtLink | Premium Art Marketplace</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,86 +24,170 @@
     <div class="bg"></div>
 
     <!-- NAV -->
-    <header class="nav">
-        <div class="logo">ArtLink</div>
+    <header class="nav" id="siteNav">
+        <a class="logo" href="#" aria-label="ArtLink home">
+            <span class="logo-mark"></span>
+            ArtLink
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="#marketplace">Marketplace</a>
+            <a href="#featured">Featured</a>
+            <a href="#artists">Artists</a>
+        </nav>
 
         <div class="nav-actions">
-            <button id="themeToggle" class="btn ghost">
-                Toggle Theme
+            <button id="themeToggle" class="btn ghost" type="button" aria-label="Toggle light and dark theme">
+                <i data-lucide="sun-medium"></i>
+                Theme
             </button>
-            <button class="btn primary">
+            <button class="btn primary" type="button">
                 Join Early Access
             </button>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>
-            A marketplace where artists sell, auction, and accept commissions directly.
-        </h1>
+    <main>
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Horizon Synergy portfolio · Art marketplace</p>
+                <h1 id="hero-title">
+                    Buy, bid, and commission exceptional art directly from artists.
+                </h1>
 
-        <p>
-            ArtLink gives creators ownership of their work, audience, and income.
-            No algorithms. No noise. Just art and value.
-        </p>
+                <p class="hero-text">
+                    ArtLink is a calm, gallery-like marketplace for digital and physical work — built for clear
+                    transactions, artist control, and collector confidence.
+                </p>
 
-        <div class="cta">
-            <button class="btn primary">Join as Artist</button>
-            <button class="btn secondary">Explore Early Access</button>
-        </div>
-    </section>
+                <div class="cta" aria-label="Hero actions">
+                    <button class="btn primary large" type="button">Join as Artist</button>
+                    <button class="btn secondary large" type="button">Explore Early Access</button>
+                </div>
+            </div>
 
-    <!-- FEATURES -->
-    <section class="grid">
-        <div class="card">
-            <i data-lucide="image"></i>
-            <h3>Sell Artwork</h3>
-            <p>Digital and physical art listings with clean ownership structure.</p>
-        </div>
+            <div class="hero-gallery reveal" aria-label="Curated artwork preview">
+                <article class="hero-art hero-art-large">
+                    <span>Limited Edition</span>
+                    <strong>No. 014</strong>
+                </article>
+                <article class="hero-art hero-art-small top">
+                    <span>Current Bid</span>
+                    <strong>$2,400</strong>
+                </article>
+                <article class="hero-art hero-art-small bottom">
+                    <span>Commission Slot</span>
+                    <strong>Open</strong>
+                </article>
+            </div>
+        </section>
 
-        <div class="card">
-            <i data-lucide="gavel"></i>
-            <h3>Auctions</h3>
-            <p>Bid on exclusive pieces with real-time pricing dynamics.</p>
-        </div>
+        <!-- FEATURES -->
+        <section class="section" id="marketplace" aria-labelledby="features-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Marketplace paths</p>
+                <h2 id="features-title">Three focused ways to transact.</h2>
+                <p>Purpose-built flows keep discovery quiet and decisions clear.</p>
+            </div>
 
-        <div class="card">
-            <i data-lucide="brush"></i>
-            <h3>Commissions</h3>
-            <p>Direct artist-to-client creation workflows.</p>
-        </div>
-    </section>
+            <div class="feature-grid">
+                <article class="card reveal">
+                    <div class="icon-wrap"><i data-lucide="image"></i></div>
+                    <h3>Sell Artwork</h3>
+                    <p>List digital and physical pieces with clean presentation, pricing, and ownership context.</p>
+                </article>
 
-    <!-- ART PREVIEW -->
-    <section class="preview">
-        <h2>Featured Works</h2>
+                <article class="card reveal">
+                    <div class="icon-wrap"><i data-lucide="gavel"></i></div>
+                    <h3>Curated Auctions</h3>
+                    <p>Run timed drops for select work with transparent bidding and collector-ready metadata.</p>
+                </article>
 
-        <div class="art-grid">
-            <div class="art"></div>
-            <div class="art"></div>
-            <div class="art"></div>
-            <div class="art"></div>
-        </div>
-    </section>
+                <article class="card reveal">
+                    <div class="icon-wrap"><i data-lucide="brush"></i></div>
+                    <h3>Private Commissions</h3>
+                    <p>Convert interest into structured client requests without turning the product into a feed.</p>
+                </article>
+            </div>
+        </section>
 
-    <!-- ARTIST VALUE -->
-    <section class="value">
-        <h2>Built for Artists</h2>
-        <p>
-            Own your audience. Set your value. Sell directly. No platform interference,
-            no algorithm dependency.
-        </p>
-    </section>
+        <!-- ART PREVIEW -->
+        <section class="section preview" id="featured" aria-labelledby="featured-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Featured works</p>
+                <h2 id="featured-title">A gallery-first surface for art.</h2>
+            </div>
 
-    <!-- CTA -->
-    <section class="final-cta">
-        <h2>Start building your presence</h2>
-        <button class="btn primary">Get Early Access</button>
-    </section>
+            <div class="art-grid">
+                <article class="art tall reveal">
+                    <div class="art-meta">
+                        <span>Digital painting</span>
+                        <strong>Reserve $840</strong>
+                    </div>
+                </article>
+                <article class="art reveal">
+                    <div class="art-meta">
+                        <span>Oil on canvas</span>
+                        <strong>Buy $1,200</strong>
+                    </div>
+                </article>
+                <article class="art wide reveal">
+                    <div class="art-meta">
+                        <span>Generative study</span>
+                        <strong>Auction live</strong>
+                    </div>
+                </article>
+                <article class="art reveal">
+                    <div class="art-meta">
+                        <span>Commission</span>
+                        <strong>From $500</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ARTIST VALUE -->
+        <section class="value" id="artists" aria-labelledby="artist-title">
+            <div class="value-copy reveal">
+                <p class="eyebrow">For artists</p>
+                <h2 id="artist-title">Control the sale, not the scroll.</h2>
+                <p>
+                    Present your portfolio like a private gallery, set pricing on your terms, and turn collector
+                    interest into purchases, bids, or commission requests.
+                </p>
+            </div>
+
+            <div class="value-list reveal" aria-label="Artist benefits">
+                <div>
+                    <span>01</span>
+                    <strong>Direct monetization</strong>
+                </div>
+                <div>
+                    <span>02</span>
+                    <strong>No algorithm dependency</strong>
+                </div>
+                <div>
+                    <span>03</span>
+                    <strong>Premium presentation</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="final-cta reveal" aria-labelledby="cta-title">
+            <p class="eyebrow">Early access</p>
+            <h2 id="cta-title">Launch your next art transaction in a quieter marketplace.</h2>
+            <p>Join the first group of artists and collectors shaping ArtLink.</p>
+            <div class="cta center">
+                <button class="btn primary large" type="button">Get Early Access</button>
+                <button class="btn secondary large" type="button">View Marketplace Vision</button>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© ArtLink</p>
+        <p>© ArtLink by Horizon Synergy</p>
     </footer>
 
     <script src="script.js"></script>
